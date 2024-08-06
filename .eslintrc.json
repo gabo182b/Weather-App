@@ -1,3 +1,33 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "standard",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "perfectionist"
+  ],
+  "rules": {
+    "indent": [2, 2],
+    "perfectionist/sort-jsx-props": [
+        "error",
+        {
+          "type": "alphabetical",
+          "order": "asc",
+          "ignoreCase": true,
+          "ignorePattern": [],
+          "groups": [],
+          "customGroups": {}
+        }
+      ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
